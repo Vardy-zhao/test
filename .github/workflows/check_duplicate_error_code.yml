@@ -3,10 +3,10 @@ name: Check Duplicate Error Codes
 on:
   push:
     branches:
-      - main
+      - '*'
   pull_request:
     branches:
-      - main
+      - '*'
 
 jobs:
   check-duplicate-error-codes:
