@@ -26,10 +26,11 @@ jobs:
             print fields[1]
           }' README.md)
           
-          echo "Extracted error codes: $error_codes"
           duplicates=$(echo "$error_codes" | sort | uniq -d)
+          
           if [ -n "$duplicates" ]; then
             echo "Error: Detected duplicate error codes in README.md:"
             echo "$duplicates"
-            exit 1
+            exit 1 
+          fi
 
