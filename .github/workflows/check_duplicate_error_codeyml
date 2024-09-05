@@ -1,0 +1,26 @@
+name: Check Duplicate Error Codes
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-duplicate-error-codes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check for duplicate error codes in README.md
+        run: |
+          error_codes=$(grep -oP "ERROR_CODE_\w+" README.md)
+          duplicates=$(echo "$error_codes" | sort | uniq -d)
+          if [ -n "$duplicates" ]; then
+            echo "Error: Detected duplicate error codes in README.md:"
+            echo "$duplicates"
+            exit 1
+          fi
