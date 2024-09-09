@@ -10,8 +10,8 @@ if [ -n "$duplicate_code" ]; then
 fi
 
 # 通过git diff获取本次提交的改动
-new_error_codes=$(git diff --cached ERROR_CODE.md | grep '^+|\s*[0-9]' | awk -F '|' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
-deleted_error_codes=$(git diff --cached ERROR_CODE.md | grep '^-|\s*[0-9]' | awk -F '|' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
+new_error_codes=$(git diff --cached ERROR_CODE.md | grep '^+|\s*[0-9xX]\{1,\}' | awk -F '|' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
+deleted_error_codes=$(git diff --cached ERROR_CODE.md | grep '^-|\s*[0-9xX]\{1,\}' | awk -F '|' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
 
 # 文件有变化，需要检查是否有重复的错误码
 if [ -n "$deleted_error_codes" ] || [ -n "$new_error_codes" ]; then
@@ -24,7 +24,7 @@ if [ -n "$deleted_error_codes" ] || [ -n "$new_error_codes" ]; then
   for new_item in $new_error_codes; do
     flag=0
     for deleted_item in $deleted_error_codes; do
-      if [ "$new_item" -eq "$deleted_item" ]; then
+      if [ "$new_item" == "$deleted_item" ]; then
         flag=1
         break
       fi
@@ -79,8 +79,9 @@ if [ -n "$deleted_error_codes" ] || [ -n "$new_error_codes" ]; then
       echo "Python or PHP is not installed on this system.Can't update Confluence document,Please update Confluence document manually"
       exit 1
   fi
+  res=""
   if [ -n "$PYTHON_CMD" ]; then
-    $PYTHON_CMD -c '
+    res=$($PYTHON_CMD -c '
 import sys
 import http.client
 import json
@@ -152,16 +153,14 @@ response = conn.getresponse()
 conn.close()
 data = response.read()
 if response.status == 200:
-    print("Confluence content updated successfully.")
+    print("success")
     with open("ERROR_CODE.md", "w", encoding="utf-8") as f:
         f.write(md_content)
 else:
     print(f"Failed to update Confluence content: {response.status}")
-    exit(1)
-' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes"
+' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes")
   elif [ -n "$PHP_CMD" ]; then
-    $PHP_CMD -r '
-<?php
+    res=$($PHP_CMD -r '
 $confluence_data = json_decode($argv[1], true);
 $deleted_codes   = explode(" ", $argv[2]);
 $update_codes   = explode(" ", $argv[3]);
@@ -239,14 +238,15 @@ $response = curl_exec($ch);
 $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 if ($httpcode == 200) {
-    echo "Confluence content updated successfully.\n";
+    echo "success";
     file_put_contents("ERROR_CODE.md", $md_content);
 } else {
     echo "Failed to update Confluence content: " . $httpcode . "\n";
-    exit(1);
 }
-?>
-' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes"
+' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes")
+  fi
+  if [ "$res" != "success" ]; then
+    exit 1
   fi
   git add ERROR_CODE.md
 fi
