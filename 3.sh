@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # 提取 ERROR_CODE.md
 error_codes_in_md=$(grep '^|\s*[0-9]' ERROR_CODE.md | awk -F '|' '{gsub(/^[ \t]+|[ \t]+$/, "", $2); print $2}')
 
@@ -59,19 +58,6 @@ if [ -n "$deleted_error_codes" ] || [ -n "$new_error_codes" ]; then
     exit 1
   fi
 
-  # 检查confluence上面的错误码是否比本地的多，如果是，则不允许提交且给出先同步的提示
-#  duplicate_codes=()
-#  for remote_code in $confluence_codes; do
-#    if ! echo "$error_codes_in_md" | grep -qw "$remote_code" && \
-#       ! echo "$deleted_codes" | grep -qw "$remote_code"; then
-#      duplicate_codes+=("$remote_code")
-#    fi
-#  done
-#  if [ -n "$duplicate_codes" ]; then
-#    echo "Error: Confluence has been updated to the latest version. Please sync the error codes from Confluence to your local environment first: $duplicate_codes"
-#    exit 1
-#  fi
-
   PYTHON_CMD=""
   PHP_CMD=""
   # 更新confluence，中文字符shell不好处理，要用python或者php
@@ -102,6 +88,8 @@ import re
 from collections import OrderedDict
 confluence_data = json.loads(sys.argv[1])
 deleted_codes = sys.argv[2].split(" ")
+update_codes = sys.argv[3].split(" ")
+new_codes  = sys.argv[4].split(" ")
 version_number = confluence_data["version"]["number"] + 1
 update_data = {}
 if "body" in confluence_data and "storage" in confluence_data["body"]:
@@ -127,8 +115,12 @@ for line in table_lines:
         if len(row) < 3:
             continue
         code, cn, en = row[0], row[1], row[2]
-        if code not in deleted_codes:
-            update_data[code] = {"cn": cn, "en": en}
+        if (code in deleted_codes or (code in update_codes and code not in update_data) or (code not in new_codes and code not in update_data)):
+            continue
+        update_data[code] = {
+            "cn": row[1],
+            "en": row[2],
+        }
 update_data = OrderedDict(sorted(update_data.items()))
 md_content = "## 异常code表\n| Code   | CN  | EN                                            |\n|--------|-----|-----------------------------------------------|\n"
 html_content = "<table data-table-width=\"1800\" data-layout=\"default\" ac:local-id=\"8cfa5e45-3eee-441b-9847-85c0fb3af991\"><tbody><tr><th><p>Code</p></th><th><p>CN</p></th><th><p>EN</p></th></tr>"
@@ -136,8 +128,6 @@ for code, item in update_data.items():
     md_content += f"|{code}|{item["cn"]}|{item["en"]}|\n"
     html_content += f"<tr><td><p>{code}</p></td><td><p>{item["cn"]}</p></td><td><p>{item["en"]}</p></td></tr>"
 html_content += "</tbody></table>"
-with open("ERROR_CODE.md", "w", encoding="utf-8") as f:
-    f.write(md_content)
 payload = json.dumps({
     "id": "3333423226",
     "status": "current",
@@ -163,25 +153,26 @@ conn.close()
 data = response.read()
 if response.status == 200:
     print("Confluence content updated successfully.")
+    with open("ERROR_CODE.md", "w", encoding="utf-8") as f:
+        f.write(md_content)
 else:
     print(f"Failed to update Confluence content: {response.status}")
     exit(1)
-' "$confluence_data" "$deleted_codes"
+' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes"
   elif [ -n "$PHP_CMD" ]; then
     $PHP_CMD -r '
 <?php
 $confluence_data = json_decode($argv[1], true);
-$deleted_codes   = $argv[2];
-$version_number = $confluence_data["version"]["number"] + 1;
+$deleted_codes   = explode(" ", $argv[2]);
+$update_codes   = explode(" ", $argv[3]);
+$new_codes   = explode(" ", $argv[4]);
+$version_number  = $confluence_data["version"]["number"] + 1;
 $update_data = [];
 if (isset($confluence_data["body"]["storage"]["value"])) {
     $html = $confluence_data["body"]["storage"]["value"];
-    // 匹配表格行
     preg_match_all("/<tr>(.*?)<\/tr>/s", $html, $rows);
-    foreach ($rows[1] as $row) {
-        if (strpos($row, "-") !== false) {
-            continue;
-        }
+    foreach ($rows[1] as $i => $row) {
+        if ($i < 1) continue;
         preg_match_all("/<td[^>]*><p[^>]*>(.*?)<\/p><\/td>/s", $row, $cells);
         $code = $cells[1][0];
         $cn   = $cells[1][1];
@@ -194,34 +185,32 @@ if (isset($confluence_data["body"]["storage"]["value"])) {
         }
     }
 }
-$lines = file("ERROR_CODE.md", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$lines       = file("ERROR_CODE.md", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $table_lines = array_slice($lines, 2);
 foreach ($table_lines as $line) {
-    if (strpos($line, "-") !== false) {
-        continue;
-    }
+    if (strpos($line, "-") !== false) continue;
     if (strpos($line, "|") !== false) {
         $row = preg_split("/\s*\|\s*/", trim($line));
         array_shift($row);
         array_pop($row);
         $code = $row[0];
-        if (!in_array($code, $deleted_codes)) {
-            $update_data[$code] = [
-                "cn" => $row[1],
-                "en" => $row[2],
-            ];
+        if (in_array($code, $deleted_codes) || (in_array($code, $update_codes) && !isset($update_data[$code])) || (!in_array($code, $new_codes) && !isset($update_data[$code]))) {
+            continue;
         }
+        $update_data[$code] = [
+            "cn" => $row[1],
+            "en" => $row[2],
+        ];
     }
 }
 ksort($update_data);
 $html_content = "<table data-table-width=\"1800\" data-layout=\"default\" ac:local-id=\"8cfa5e45-3eee-441b-9847-85c0fb3af991\"><tbody><tr><th><p>Code</p></th><th><p>CN</p></th><th><p>EN</p></th></tr>";
-$md_content = "## 异常code表\n| Code   | CN  | EN                                            |\n|--------|-----|-----------------------------------------------|\n";
+$md_content   = "## 异常code表\n| Code   | CN  | EN                                            |\n|--------|-----|-----------------------------------------------|\n";
 foreach ($update_data as $code => $item) {
     $md_content .= "|" . $code . "|" . $item["cn"] . "|" . $item["en"] . "|\n";
     $html_content .= "<tr><td><p>".$code."</p></td><td><p>".$item["cn"]."</p></td><td><p>".$item["en"]."</p></td></tr>";
 }
 $html_content .= "</tbody></table>";
-file_put_contents("ERROR_CODE.md", $md_content);
 $payload = json_encode([
     "id"      => "3333423226",
     "status"  => "current",
@@ -251,20 +240,13 @@ $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 if ($httpcode == 200) {
     echo "Confluence content updated successfully.\n";
+    file_put_contents("ERROR_CODE.md", $md_content);
 } else {
     echo "Failed to update Confluence content: " . $httpcode . "\n";
     exit(1);
 }
 ?>
-' "$confluence_data"
+' "$confluence_data" "$deleted_codes" "$updated_codes" "$new_codes"
   fi
   git add ERROR_CODE.md
 fi
-
-
-# 测试用例
-# 1、本地删除，confluence也要删除
-# 2、confluence比本地的code多，提示要先更新
-# 3、本地新增，本地不允许重复
-# 4、本地新增，confluence上面有，不允许提交
-# 5、本地修改，更新confluence
