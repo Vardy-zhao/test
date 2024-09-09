@@ -5,5 +5,5 @@
 |102|请求参数类型不对|bad request type|
 |104|很帅|so handsome|
 |105|不知道是啥|I don't know what 7 you say|
-|106|这可还行？|This can be right|
+|106|这可还行？|This can be right？|
 |107|非常好|Very good|
