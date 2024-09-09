@@ -32,9 +32,47 @@
 |102|请求参数类型不对|bad request type|
 |103|请求格式错误|bad request format|
 |107|Hello a|你好啊|
+|20001|通道配置文件创建失败|Channel configure file create failed|
+|20002|当前支付方式已有同名通道|This payment method already has a channel of the same name.|
+|20003|通道配置文件删除失败|Channel configure file delete failed.|
+|20004|通道配置文件编辑失败|Channel configure file edit failed.|
+|20006|当前支付方式已有同名银行码|This payment method already has a bank code of the same name.|
+|20007|指定的默认通道不存在|The default channel does not exist.|
+|20008|修改的金额不符合条件|The revised amount does not meet the requirements.|
+|20009|没有可导出的内容|There is no exportable content.|
+|20010|不允许更改到该状态|Changes to this state are not allowed.|
+|20011|没有设置默认问题|no default problem set.|
+|20012|牌照没有设置默认的交易服务器|jurisdiction not have trading_server.|
+|20013|没有这个操作选项|Action error.|
+|20014|黑名单重复|Duplicate blacklist.|
+|20015|缺少必填字段|Missing required field.|
+|20016|Field 名称重复|Duplicate field name.|
+|20017|Form Id 重复|Duplicate form id.|
+|20018|Default value必选填写|Missing default value.|
+|20019|Payment method 重复|The payment method is already exist.|
+|20020|通道名称已存在|channel name is already exist.|
+|20021|最多显示7行数据|display up to 7 columns|
+|20022|交易信息缺失，请检查配置|Data is missing, please check the funding method's configure|
+|20023|该通道不能被删除|This channel cannot be deleted|
+|20024|次序重复|duplicate sort.|
+|20025|未配置卡片验证信息|Card validation information is not configured|
+|20026|Payment method 不存在|The payment method does not exist.|
+|20027|需要一张认证卡支付|A certified card is required.|
+|20028|卡已通过认证，请与管理员联系进行操作。|The card is authenticated, please contact the administrator to operate.|
+|20029|卡号错误。|Card number wrong.|
+|20030|认证卡片信息错误|A certified card information error.|
+|20031|Affiliate Id 已经重复|Affiliate ID {{the number}} has been assigned to another sales code {{sales code}}.|
+|20032|无效输入|Invalid input.|
 |201|已有这条数据记录存在|bad request format.|
 |202|数据记录不存在|Record is not existing.|
 |205|HUBx TA 以达到上限|HUBx TA reach the maximum.|
+|30001|通知内容为空|The notification no content.|
+|30002|通知已经存在|notification already exist.|
+|30003|Admin没有配置该通知|Admin did not configure the notification.|
+|30004|发件人不能为空|Sender name can not be empty.|
+|30005|发件人邮箱不是合法的邮箱|Sender email is not correct.|
+|30006|不是邮箱类型，不能复制|Not a mailbox type, can't copy.|
+|30007|牌照有重复通知|There are duplicate notifications.|
 |301|账户余额不足|Insufficient balance of the account.|
 |302|因为该交易账户余额，无法修改组别|Can not change group as the TA has balance.|
 |303|无法修改组别货币对|Can not update group currency.|
