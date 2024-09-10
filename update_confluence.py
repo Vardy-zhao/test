@@ -3,16 +3,18 @@ import http.client
 import json
 import re
 
-variables = {}
-with open("tmp_params", "r", encoding="utf-8") as f:
-    for line in f:
-        name, value = line.strip().split("=", 1)
-        variables[name] = value
+import http.client
 
-deleted_codes = variables.get("deleted_codes", "").split()
-update_codes = variables.get("updated_codes", "").split()
-new_codes = variables.get("new_codes", "").split()
-confluence_data = json.loads(variables.get("confluence_data", ""))
+conn = http.client.HTTPSConnection("thebidgroup.atlassian.net")
+payload = ''
+headers = {
+  'Accept': 'application/json',
+  'Authorization': 'Basic dmFyZHkuemhhb0BsaWZlYnl0ZS5pbzpBVEFUVDN4RmZHRjBaS0ROSHY5VGh5My1abzhfMDRLb1dIZ0tJMUdWRkpKMEJYRUx0Q1dqWERONXd6ckt3SDdUcUVnajRJbWhiV0pZSHhSb1pHZXJVZ1B4MGpmNWJNeGtwc1piUkNuSndDWVBRZG1BWEw5dHNmZ2tJelFBLTQ1UnRCdGd6bkoyMmY5M3ZvV044RldDazdOVjNxVVdHdzZ5ZWRzTk1qaVd1OTR6UzZubzdkb0ZNcnc9QzZFMThENEM='
+}
+conn.request("GET", "/wiki/api/v2/pages/3333423226?body-format=STORAGE", payload, headers)
+res = conn.getresponse()
+confluence_data = json.loads(res.read().decode("utf-8"))
+
 version_number = confluence_data["version"]["number"] + 1
 
 confluence_codes = []
@@ -28,13 +30,12 @@ if "body" in confluence_data and "storage" in confluence_data["body"] and "value
             code = cells[0]
             cn = cells[1] if len(cells) > 1 else ""
             en = cells[2] if len(cells) > 2 else ""
-            if code not in deleted_codes:
-                exists_doc_codes[code] = True
-                confluence_codes.append({
-                    "code": code,
-                    "cn": cn,
-                    "en": en
-                })
+            exists_doc_codes[code] = True
+            confluence_codes.append({
+                "code": code,
+                "cn": cn,
+                "en": en
+            })
 with open("ERROR_CODE.md", "r", encoding="utf-8") as file:
     lines = file.readlines()
 table_lines = lines[2:]  # 跳过前两行表头
@@ -48,8 +49,6 @@ for line in table_lines:
             code = row[1]
             cn = row[2] if len(row) > 2 else ""
             en = row[3] if len(row) > 3 else ""
-            if code in deleted_codes or (code in update_codes and code not in exists_doc_codes) or (code not in new_codes and code not in exists_doc_codes):
-                continue
             md_codes.append({
                 "code": code,
                 "cn": cn,
