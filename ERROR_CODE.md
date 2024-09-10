@@ -82,3 +82,53 @@
 |30005|发件人邮箱不是合法的邮箱|Sender email is not correct.|
 |30006|不是邮箱类型，不能复制|Not a mailbox type, can't copy.|
 |30007|牌照有重复通知|There are duplicate notifications.|
+|4x|和用户相关||
+|40001|用户名或密码错误|The username or password you’ve entered is incorrect|
+|40002|Admin user 不存在|Admin user not exist|
+|40003|密码错误|The password you’ve entered is incorrect|
+|40004|Admin Group id 已存在|Admin Group id already exist|
+|40005|交易账号不存在|Trading account does not exist|
+|40006|special 已存在|Special User is already exist|
+|40007|Admin group 不存在|Admin group not exist|
+|40008|用户被禁用|This special user is banned.|
+|40009|用户不存在|User not exists|
+|40010|邮箱或密码错误|Email or password is incorrect|
+|40011|Code名称重复|Code is already exist|
+|40012|该用户禁止删除|This user disables deletion|
+|40013|登录信息已失效|Login information is invalid|
+|40014|未认证|Unauthenticated|
+|40015|不支持的授权类型|Unsupported grant type|
+|40016|刷新令牌无效|The refresh token is invalid|
+|40017|用户证书不正确|The user credentials were incorrect|
+|40018|用户在黑名单|The user in black list|
+|40019|该IB用户不存在|This IB user not exist|
+|40020|用户名或者重置令牌错误|Incorrect user name or password reset token|
+|40021|重置密码邮件已过期|The retrieve password email has expired|
+|40022|未达到最低年龄要求|allowed registration minimum age is|
+|40023|该用户无MT4账户|This user has no MT4 trading account|
+|40024|该用户无操作權限|This user has no operation permissions|
+|40025|该用户无此交易賬戶|You are not authorized to view this account|
+|40026|该服务器无此交易賬戶|Trading account does not exist in this server|
+|40027|该交易賬戶已经存在|Trading account already exists.|
+|40028|该请求地址无效|The request address is invalid.|
+|40029|该用户名或登录名已存在|The Login Name or Name is already exist|
+|40030|该邮箱已存在|Email is already exist|
+|40031|Manual账号格式错误|The manual account is incorrect|
+|40033|非sale用戶|This user is not a sale user|
+|40034|admin用戶無法添加manual賬戶|Admin cannot add manual account.|
+|40035|此IP已被禁止登陆系统。|You can not login to the system through this IP.|
+|40036|根据相关配置，此用户敏感信息被隐藏|Hide sensitive information.|
+|40037|用户更新失败|Change failed.|
+|40038|没有数据需要更新|No data were updated.|
+|40040|您的账户不可用|Your account cannot be used.|
+|40041|该用户无操作权限|This user has no operation permissions.|
+|40042|Photo ID 已过期|The photo ID has expired|
+|40043|证件过期日期已过|The expiry date is expired|
+|40044|该手机号已经存在|The phone number already exists.|
+|40045|用户已绑定手机号，请不要重复绑定|The user has already bound a mobile phone number, please do not bind it repeatedly.|
+|40046|请注意，您必须年满%{min_year}岁且不超过%{max_year}岁才能申请开户。|Please note that in order to open an account with us you need to be at least %{min_year} years old and younger than %{max_year} years of age.|
+|40047|用户IP被禁止访问|User IP is prohibited from accessing.|
+|40100|验证器不存在|Authenticator is not existing.|
+|40102|账号恢复申请失败，登录密码或生日不正确|Reset authenticator failed, password or date of birth was incorrect.|
+|40104|已存在验证器|Authenticator already exists.|
+|40106|暂不支持修改成此邮箱|This new email address is not supported now.|
