@@ -183,3 +183,4 @@
 |42012|编辑进度值错误|Edit progress value error.|
 |42013|不在可编辑的时间范围内,不能编辑进度条|Not within editable time frame. Can't edit the progress bar.|
 |42014|您已领取完所有奖励|You have received all the reward|
+|42015|用户积分及活动功能未开启|User Points and Promotion function are not turned on|
