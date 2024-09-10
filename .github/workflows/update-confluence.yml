@@ -1,7 +1,9 @@
 name: Update Confluence
 
-on: 
-  workflow_dispatch:  # 允许手动触发
+on:
+  push:
+    branches:
+      - '**'
 
 jobs:
   update-confluence:
