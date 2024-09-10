@@ -72,3 +72,4 @@
 |20030|认证卡片信息错误|A certified card information error.|
 |20031|Affiliate Id 已经重复|Affiliate ID {{the number}} has been assigned to another sales code {{sales code}}.|
 |20032|无效输入|Invalid input.|
+|1xxxx|||
