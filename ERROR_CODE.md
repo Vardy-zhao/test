@@ -247,3 +247,355 @@
 |44029|订单状态不适用|Order Status unavailable.|
 |44030|跟踪单号为空|Tracking number is null.|
 |44031|快递公司名字错误|Express company name wrong.|
+|5x|和order相关||
+|50001|只能导出三个月的数据|Only three months of data can be exported.|
+|6x|和transaction相关||
+|60001|交易不存在|Transaction not exist|
+|60002|Transaction 修改失败|Transaction edit failed|
+|60003|Transaction 批准失败|Transaction approve failed|
+|60004|Transaction Type 已存在|The transaction type is already exist|
+|60005|Transaction Type 不允许编辑|Update this transaction type are not allowed|
+|60006|Transaction Type 不允许删除|Delete this transaction type are not allowed|
+|60007|Transaction Type 被关闭|Transaction Type status is disabled|
+|60008|交易创建失败|Transaction create failed|
+|60009|没有默认汇率|Not have default exchange rates|
+|60010|转账失败|Internal transfer failed|
+|60011|账户可提现余额不足|Insufficient withdrawable amount|
+|60012|取消Transaction权限不够|No permission to cancel this Transaction|
+|60013|对不起，取消订单失败，请求退款错误|Sorry,Cancel transaction failed,Request deposit fund error|
+|60014|订单正在处理中，请两分钟后再尝试操作|The current transaction is being processed, please try again in two minutes|
+|60015|内转订单状态不正确|The transfer transaction status not correct.|
+|60016|内转开关已关闭|Internal transfer switch is closed.|
+|60017|出金开关已关闭|Withdraw switch is closed.|
+|60018|入金开关已关闭|Deposit switch is closed.|
+|60019|入金请求失败|Request deposit fund failed.|
+|60020|余额不足|Insufficient balance|
+|60021|交易不存在|Transaction not exist|
+|60022|金额或汇率异常|Amount or rate error|
+|60023|非特定订单状态Trading server comment不能被编辑|Trading server comment can not be edit|
+|60024|Transaction Status错误|Transaction Status error|
+|60025|交易类型与交易分类不匹配|Transaction Category do not match.|
+|60026|邮箱和交易账号不匹配|Email and trading account do not match.|
+|60027|无法向当前交易账号转账|It is not possible to transfer funds to the current trading account.|
+|60028|转账至下级开关已关闭|Transfer to sub switch is closed.|
+|60029|转账失败|Transfer failure.|
+|60030|不能向同一用户的交易账号转账|It is not possible to transfer funds to the same user's trading account.|
+|60031|当前有未处理完成的订单，请稍后再试。|There are currently outstanding orders, please try again later.|
+|7x|和File相关||
+|70001|用户ID不能为空|User ID is required|
+|70002|交易账号ID不能为空|Trading account ID is required|
+|70003|请求的文件不存在|File does not exist|
+|70004|请求的佣金报告已存在|Rebate report already exists|
+|70005|所选MT4交易账号已被其他组别使用|The chosen MT4 trading account has been used by other node|
+|70006|获取文件资源地址失败|Failed to get temporary oss url|
+|70007|文件上传失败|File upload failed|
+|70008|文件删除失败|File deleted failed|
+|70009|协议文件名不能重复|The agreement file name cannot be repeated|
+|70010|组别不可重复使用|Group cannot be reused|
+|70011|交易账号不可重复使用|MT4 ID cannot be reused|
+|70012|语言不能为空|language is required|
+|70013|邮件发送失败|Mail Delivery Failed|
+|70014|数据请求中|funding is processing|
+|70015|语言不正确|the language was invalid|
+|70016|已经请求过HUB协议|The HUB protocol has been applied|
+|70017|签名验证失败|payment verification error|
+|70018|入金失败|payment order failed|
+|70019|协议文件不存在|The agreement does not exist|
+|70020|佐证文件不存在|The Proof File does not exist|
+|70021|已被锁定的文件无法删除|Locked files cannot be deleted|
+|70022|报告请求失败|Report request failed|
+|70023|请上传正确的文件名|Please upload the correct file name.|
+|70024|语言文件不存在|Multi_language file does not exist.|
+|70025|语言文件内容错误|Multi_language file content error.|
+|70026|Oss文件地址錯誤|Oss folder error.|
+|70027|所选MT5交易账号已被其他组别使用|The chosen MT5 trading account has been used by other node|
+|70028|文件生成失败|Failed to generate file.|
+|70029|由于数据较大，我们将在稍后将报告通过电子邮件发送给您|Due to massive data, we will email you the report later.|
+|70030|有报表正在等待导出，请稍后重试|There is report waiting for exporting, please try again later.|
+|71x|和Node相关||
+|71001|节点模板已存在|the node name already exists.|
+|71002|节点模板不允许删除|the node cannot be delete.|
+|71003|节点模板组已经存在|the node template group name already exists.|
+|71004|节点模板组中存在重复的模板|The same node template already exists.|
+|71005|保存失败 ｜ Save failed.||
+|71006|节点模版组中的模版之间存在相同的组｜Templates in a node template group have the same group.||
+|71007|节点模板组中的节点不允许解绑|Nodes in a node template group cannot be unbound.|
+|8x|和trading server, trading account 相关||
+|80001|该用户没有IB账户|This user does not have IB account|
+|80002|交易账户不存在|Trading account does not exist|
+|80003|密码格式不对，要同时包含数字和字母|The password format is incorrect， include both Numbers and letters|
+|80004|密码设置失败|Password setting failed|
+|80005|状态无需更改|No need to change|
+|80006|状态设置失败|Status setting failed|
+|80007|交易账户信息修改失败|Trading account information modify failed|
+|80009|普通账户必须没有父级|Customer must have no parent|
+|80010|对不起，添加账户不是此账户的直属下级|Sorry, the add account is not a direct subordinate of this account|
+|80011|账户在PORTAL中不存在|The account does not exist in PORTAL|
+|80012|上级IB交易账户不存在|Parent IB trading account does not exist|
+|80013|交易服务器报错|Trading server error|
+|80014|货币不存在|the currency does not exist|
+|80015|杠杆规则数据错误|the value goes wrong|
+|80016|杠杆不存在|the leverage does not exist|
+|80017|组合不存在|the set name does not exist|
+|80018|国家不存在|the country does not exist|
+|80019|组别不存在|the trading server group does not exist|
+|80020|交易服务器不存在|the trading server does not exist|
+|80021|团队代码不存在|Teamcode does not exist|
+|80022|入金模板不存在|Deposit template does not exist|
+|80023|入金通道不存在|Deposit method does not exist|
+|80024|余额不足|Insufficient balance|
+|80025|信用不足|Insufficient credit|
+|80026|组别添加失败|The trading server group saved failed|
+|80027|缺少入金参数|Missing deposit parameters|
+|80028|银行不存在|Bank does not exist|
+|80029|频道不存在|Channel does not exist|
+|80030|选择的trading server错误|The chosen trading server is incompatible with the trading account|
+|80031|已存支付信息不存在|Funding info does not exist|
+|80032|已存支付信息名字已存在|Funding info name already exist|
+|80033|汇率不存在|Exchange rate does not exist|
+|80034|第三方下单失败|The third party failed to place the order|
+|80035|入金金额不在通道允许范围|The fund amount is not allowed by the channel|
+|80036|支付金额不在通道允许范围|The payment amount is not allowed by the channel|
+|80037|上级交易账户不是IB交易账户|The parent trading account is not an IB trading account|
+|80038|该服务器有同名组|The server has groups of the same display name|
+|80039|子级不能设置为上级|Parent cannot be my child|
+|80040|对不起，您无权查看此帐户|Sorry, You are not authorized to view this account|
+|80041|此交易帐户无法在CRM中编辑|This Trading Account is not available to edit in CRM|
+|80042|注册失败|There is something wrong|
+|80043|回答错误|Your answer is incorrect|
+|80044|账号已被解绑过，暂时未开通重新绑定的功能|This account has been unbound, and the function of rebinding has not been opened for the time being|
+|80045|默认牌照不允许删除|The default jurisdiction cannot be deleted|
+|80046|默认牌照不允许编辑|The default jurisdiction cannot be edit|
+|80047|牌照名稱已被使用|The jurisdiction already used|
+|80048|销售码不存在|Salescode does not exist|
+|80049|交易服务器名字已被使用|The trading server name has been used|
+|80050|用户名重复|The login name has already been taken|
+|80051|邮箱重复|The email has already been taken|
+|80052|该服务器不能添加账户|Unable to select this server|
+|80053|账户资金不为0时，不可更改组别|The group cannot be changed if the account fund is not 0|
+|80054|该服务器已添加其它牌照|The trading server has already add jurisdiction|
+|80055|此服务器下有交易账户数据，请联系管理员删除|The server has trading account data, please contact the administrator to delete it|
+|80056|不能把自己设定为上级|You cannot set yourself as parent|
+|80058|选择的trading server错误|The chosen trading server is incompatible with the trading account  （bulk funding 错误码）|
+|80060|交易方式不存在|Funding method does not exist|
+|80061|存在未完成的訂單請稍後再試|TThere has unfinished orders, please try again later|
+|80062|客户交易账户余额不足，请联系客户充值后再进行操作|Client’s TA balance is insufficient, please contact client to top up before next cancel action|
+|80063|不存在可被取消的订单|No order exists to be cancelled|
+|80064|该订单已被取消过|Cancel order has been processed before|
+|80065|未设置汇率|The exchange rate does not exist|
+|80067|账号类型不存在|The account type does not exist|
+|80068|语言不存在|Selected languages do not exist|
+|80069|选择的币种和trading server group 不匹配|data conflict|
+|80070|无法注册trading account子账号|cannot register sub account|
+|80071|账号类型已经存在|The account type already exist|
+|80072|超出币种数量|cannot exceed the maximum number of currency|
+|80073|金额不能为零|The can not be zero|
+|80074|同一个国家不能重复使用|The same country cannot be reused|
+|80075|配置文件缺失配置|configuration  file lose config.|
+|80076|入金下单类型错误|Missing order type.|
+|80077|账户类型的货币已经存在|the account type currency already exist.|
+|80078|账户类型的组别已经存在|the account type trading server group already exist.|
+|80079|超出账号数量限制|Beyond the limitation of ta(live and wallet ta).|
+|80080|超出账号数量限制|Beyond the limitation of ta(demo ta).|
+|80081|对不起，出金金额不够支付手续费，请修改出金金额。|Sorry, the Fund out Amount is not enough to pay the surcharge, please modify the Fund out Amount.|
+|80084|邮箱格式错误|invalid email address|
+|80085|无法删除trading account，该account有下级account|Cannot delete the trading account, this account has sub account|
+|80086|该支付方式正在维护中|The payment method is under maintenance|
+|80087|CRM 缺少Internal 服务器|CRM lack of Internal server.|
+|80089|该用户没有POINTS账户，请联系管理员|This user does not have a POINTS account. Please contact the administrator.|
+|80091|MAM slave账号只能入金|MAM slave accout can only deposit.|
+|80090|文件名重复|The Display name has already been taken.|
+|80092|HUBx服务器报错|HUBx server error|
+|80093|该用户不是HUB用户|The user is not a hub user.|
+|80094|MAM账号不能出入金|MAM master account can not deposit and withdrawal.|
+|80095|MAM 账号不能修改组别|MAM account can not change group.|
+|80096|无法修改结算方式|The commission type cannot be modified.|
+|80098|无法为手动帐户生成报告|Reports cannot be generated for manual accounts.|
+|80099|账号不满足移除条件|This account can’t be removed.|
+|80100|Admin审核附加账号失败，请重新检查TA Status 规则|Failed, Please check the configuration.|
+|80101|创建失败，请联系管理员|Failed, Please contact the admin.|
+|80102|当前用户在积分明细报表中存在未处理错误记录，请处理后再继续操作。|The client has an error points|
+|80103|返现失败|Cash Back Failed|
+|80104|请先开通钱包账户|Please activate your wallet account first|
+|80105|IB TA不允许内转入金|IB Trading Account is not allowed to make internal transfer in.|
+|80106|IB TA不允许入金|IB Trading Account is not allowed to make deposit.|
+|80107|操作过于频繁，请稍后再试|Operation too frequent, please try again later.|
+|80108|调用PSP时发生错误|There is an error while calling PSP.|
+|80109|超出"payto"协议上限|You have reached the limit. Please use the existing agreements for payment.|
+|80110|您当前账号类型为Customer TA，无法向IB TA转账！|Customer trading account cannot internal transfer to IB trading account.|
+|80111|交易分类已存在|This Transaction Category already exists.|
+|80112|此交易分类已在别处被使用，请检查后再试。|This Transaction Category is using by other settings, please confirm before disabling it.|
+|80113|添加重复"payto"协议错误|A payment agreement with the provided bank account already exists. Please use a different one.|
+|80115|没有找到"payto"通道|Channel with name "payto" is missing.|
+|80116|备注已存在|Comment already exists.|
+|80117|Demo和wallet交易账号不允许进行内转操作|Demo and wallet trading accounts are not allowed to perform internal transfer operations.|
+|80125|交易大赛申请失败，账号和邮箱不匹配|Account/Email match not found.|
+|80126|交易大赛申请失败，IB账号不能报名|Account not eligible: this is a IB account.|
+|80127|交易大赛申请失败，MAM账号不能报名|Account not eligible: this is a MAM account.|
+|80128|交易大赛申请失败，Live账号不能报名|Account not eligible: this is not a live account.|
+|80129|交易大赛申请失败，用户所属国家不允许参赛|Account not eligible: user country is not allowed.|
+|80130|交易大赛申请失败，用户报名账号已到达最大值|The user has reached the maximum number of accounts for participation.|
+|80131|交易大赛申请失败，此账号已报名|This account is already in this competition.|
+|80132|没有交易比赛|No active competition|
+|80133|交易大赛申请失败, 归档账号不能报名|Account not eligible: archived account.|
+|80134|交易大赛申请失败, 未能获取账户净值|Not able to get the account equity.|
+|80175|CopyTrading API 错误|CopyTrading API Error|
+|80301|All Sales Code值为空|All Sales Code value is empty.|
+|80302|当前客户销售代码“{sales_code}”不符合更新条件|Current Member Sales Code "{sales_code}" does not meet the criteria for update.|
+|80303|交易账户“{external_id}”的交易账户销售代码“{sales_code}”不符合更新条件|TA Sales Code "{sales_code}" for trading account "{external_id}" does not meet the criteria for update.|
+|80304|钱包账户“{external_id}”的交易账户销售代码“{sales_code}”不符合更新条件|TA Sales Code "{sales_code}" for wallet account "{external_id}" does not meet the criteria for update.|
+|80305|不支持同时更改All Sales Code 和Member Sales Code|Changing All Sales Code and Member Sales Code at the same time is not supported.|
+|80601|汇率失效|Exchange rate not valid.|
+|81x|||
+|81000|fund info的set name 重复|The set name has already been taken|
+|81002|database name 重复|The database name has already been taken|
+|81003|该服务器的账户无法添加|The trading account can not be add|
+|81004|email record 不存在|The email record does not exist|
+|81005|不同服务器存在相同的账号，请先从树上搜索账号再进行生成报告|There are same number Trading Accounts on different Trading Servers in CRM. Please search the tree at first, and choose your target account on the tree to generate the rebate report.|
+|81006|该账号不是IB|The account not is IB|
+|81007|该账号不属于可查看范围|This Trading Account isn’t available to check|
+|81008|该用户无法申请子账号，请联系管理员|submission of sub account application failed.|
+|81009|不能为0|cannot be zero|
+|81012|该账号不可生成报告|This Trading Account can not generate rebate report|
+|81011|由于数据传输原因杠杆未显示实际数值，请稍晚再尝试确认修改|The leverage cannot be changed.|
+|81010|交易账户不存在于此树关系中|Trading account is not available in the tree.|
+|81020|货币为POINTS的钱包账户不可设置为IB|The POINTS wallet account cannot be set as IB|
+|81021|账户数量已到达上限，请联系管理员。|Trading Account limit reached. Please contact Customer Service.|
+|81022|您已经提交了请求，请等待。|You have submitted the request, Please wait.|
+|81013|数据重复|The data has already been taken|
+|81014|该数据不存在|The data not exists;|
+|81015|您所选的选项已在其他问题中被使用，请确认后重新添加。|The chosen option has been selected in other question, please check.|
+|82000|Demo Trading Account Config配置缺失或格式错误|Demo trading account config error.|
+|82001|配置限制无法创建Demo Trading Account|Unable to create demo trading account due to configuration restrictions..|
+|82002|注册Demo Trading Account数量超出限制|Exceed demo trading account quantity limit (限制的数量).|
+|82003|Demo Trading Account请求入金失败|Demo Trading Account Request creditIn fund failed.|
+|82004|用户来源为referral，不能通过注册流程注册Demo Trading Account|cannot register demo trading account through the registration process.|
+|82005|服务器类型唯一|The trading server type is unique, can not be create or edit|
+|82006|POINTS货币不能新增|POINTS currency cannot be added|
+|82007|普通用户只能有一个wallet账号|customer user only have one points account|
+|82008|无法再次参与活动|unable to participate promotion again.|
+|82010|没有账号可参与活动|no account to participate in the promotion|
+|82011|超过活动激活时间,无法参与该活动|cannot participate in the activity for more than activation time|
+|82012|杠杆已存在|The leverage has already exists|
+|82013|入金金额超出单个帐户限制|Exceed demo trading account deposit limit|
+|82014|入金金额超出帐户balance限制|Exceed demo trading account balance limit.|
+|82015|用户被禁止创建demo ta|Additional Demo Account creation has been disabled.|
+|83000|监管牌照不存在|jurisdiction not exists.|
+|84000|公司不存在|company not exists.|
+|84001|默认登陆方式不存在|default login method not exists.|
+|84002|不能删除默认域名|cannot delete default domains.|
+|84003|只能有一个特殊域名|there can only have one special domain.|
+|84004|重复域名|The domain already exists.|
+|84005|该sales code不存在|the sales code does not exist.|
+|84006|该营销活动不存在|the marketing campaign does not exist.|
+|84007|该弹框不能隐藏|the popup window can not be hide.|
+|84008|推荐码不存在|the referral code does not exist.|
+|84009|推荐码重复|the referral code already exists.|
+|84010|无权限创建推荐码|you do not have the right to create referral code.|
+|84011|无权限编辑推荐码|you do not have the right to edit referral code.|
+|84012|积分服务器已经存在|wallet server is already exists.|
+|84013|该评论不存在|the comment does not exists.|
+|84014|无法删除这条评论|can not delete this comment.|
+|84015|无法编辑这条评论|can not edit this comment.|
+|84016|交易品种已经被使用|trade_symbols is used.|
+|84017|点值设置规则不存在|point value rule not exists.|
+|84018|品种组名称已存在|symbols group name already exists.|
+|84019|点值组名称已存在|pips group name already exists.|
+|84020|已有三条重要公共评论，若添加新的，请移除至少一条现有的|Maximum of 3 Important Public Comments. Please Remove a comment before adding an additional one.|
+|84021|已有三条重要内部评论，若添加新的，请移除至少一条现有的|Maximum of 3 Important Internal Comments. Please Remove a comment before adding an additional one.|
+|84022|没有权限删除这条评论|You are not authorized to delete this comment.|
+|84024|该来源已被使用！|This source is currently being used in a campaign!|
+|84025|该来源名称已存在！|Source name already exists.|
+|85001|无效的 Account ID 或者 API key|Invalid Account ID or API key.|
+|85002|无法更改夏令时|cannot edit daylight saving time.|
+|85003|文件行数不对|The column of this file is incorrect.|
+|85004|触发条件不对|The trigger action is invalid.|
+|85005|已存在相同触发条件|There already has a same trigger action.|
+|85006|列参数错误|The columns is invalid.|
+|85007|品种已被其他品种组使用|symbols already been used.|
+|85008|组成员参数错误|The members are invalid.|
+|85009|该组已经存在|The sales team is already exist.|
+|85010|父级组错误|The parent team is invalid.|
+|85011|该组有下级组|The sales team has a sub team.|
+|85012|销售码已经被使用|The sales code is already used.|
+|85013|不能选自己为自己的上级组|The team itself cannot be its parent team.|
+|85014|同一个销售不能被添加到有上下级关系的多个销售团队中|Sales member cannot be added to overlapping sales teams.|
+|85015|分配规则名称已经存在|jurisdiction assign rule name already exists.|
+|85016|分配规则中国家不能重复|country already be used.|
+|85017|分配规则不存在|jurisdiction assign rule not exists.|
+|85018|一个牌照只能有5个账号类型|Jurisdiction can only have 5 types.|
+|85019|不能关闭默认账号类型|Cannot disable the default type.|
+|85020|不能把关闭的类型设为默认类型|Cannot set the disabled type as default type.|
+|85021|不能删除该账号类型|cannot delete the member account type.|
+|85022|该账号已经被归档|The account is archived.|
+|85023|归档账号不能拆分出金订单|Archived Trading Account can not split withdrawal.|
+|85027|品种exchange rate mapping已存在|Symbol exchange rate mapping already exists.|
+|85030|sub tab 名字重复|duplicated sub tab name.|
+|85031|iframe 名字重复|duplicated iframe name.|
+|85032|sub tab 名字不符合要求|the sub tab name is invalid.|
+|85033|iframe 名字不符合要求|the iframe name is invalid.|
+|85034|注册时间设置错误|the register time is invalid.|
+|85035|iframe url 名字重复|duplicated iframe url name.|
+|85036|iframe url 名字不符合要求|the iframe url name is invalid.|
+|85040|同一服务器类型下监管已经存在|jurisdiction already exists under the same server type.|
+|85041|数据不存在|data not exist.|
+|85042|不能修改或只读配置|Can not edit or delete configuration which is not editable.|
+|85044|展示名称不能重复|The same display name cannot be reused.|
+|85046|语言不存在或不可用|The display language does not exist or is not available.|
+|87001|USDT地址只允许包含数字和字母。|Only Numbers and Alphabets are allowed in USDT Address.|
+|87002|验证码无效|Invalid Verification Code.|
+|87003|该验证码已被使用。|The code has been used.|
+|87004|此地址已被其他用户注册。|The submitted address is already registered by another user.|
+|87005|抱歉，系统错误，请稍后再试。|Oops, something went wrong, please try again later.|
+|87006|验证码发送失败，请联系管理员。|Failed to send the verification code, please contact the administrator.|
+|87007|当前账号关联的USDT地址有未完成的出金订单！|The USDT address associated with the current account has unfinished withdrawal orders！|
+|87008|无法清除|Unable to clear|
+|87009|出金验证码无效|Invalid Verification Code for withdrawal verification.|
+|87010|该出金验证码已被使用。|The code for withdrawal verification has been used.|
+|9x|和权限相关||
+|90001|权限已存在|Permission already exists|
+|90002|角色不存在|Role don't exist|
+|90003|平台不存在|Platform don't exist|
+|90004|用户没有正确的权限|User does not have the right permissions|
+|90005|权限关系不正确|the permissions not right|
+|90007|不是管理员或超级管理员|Not admin user or god user|
+|90009|IB Portal 未开启|IB Portal not open|
+|90010|无法编辑smartbyte|cannot edit smartbyte|
+|90011|没有权限申请demoTA ｜ No permission to apply demo TA||
+|90012|TA 无法被修改为 IB 或者 Archived 状态，或被删除|Trading account could not be set to IB or Archived Status, or deleted|
+|90013|该模板名称已存在|The template name already exists|
+|10x|和coupon相关||
+|100001|优惠卷有效时间范围不能小于提示过期时间|The validity period of the coupon cannot be less than the prompt expiration time|
+|100002|此优惠券已被应用，无法关闭|This coupon has been applied, cannot be turned off|
+|100003|此优惠券已被应用，无法删除|This coupon has been applied, cannot be deleted.|
+|100004|优惠卷不存在|This coupon doesn’t exist.|
+|100005|优惠卷状态失效|The status of this coupon is invalid.|
+|100006|优惠卷已过期|This coupon has expired.|
+|100007|优惠卷发放方式不匹配|The distribution method of this coupon doesn’t match.|
+|100008|优惠卷数量不足|Insufficient number of coupons.|
+|100009|优惠卷在发放中,请等待|This coupon is being distributed, please wait.|
+|100010|优惠卷名字已经存在|The coupon name already exists.|
+|100011|无用户满足发放条件|No users meet the conditions for distribute.|
+|100013|优惠券状态失效，请刷新后重试|The status of this coupon is invalid, please refresh and try again.|
+|100014|商品已下架或删除，请刷新后重试|The product does not on sale or exists, please refresh and try again.|
+|100015|优惠券总数需等于或大于已发放数量|Max coupons must equal or greater than the number distributed.|
+|11x|和Refer Friend相关||
+|110001|无效的交易账户|Trading account is invalid.|
+|110002|领取失败，请联系客服|Redeem failed，please contact customer service.|
+|110101|邀请好友设置不存在|Refer Friends Setting not exist.|
+|110102|活动结束时间存在时，不可比活动开始时间小|When the end time exists, it cannot be smaller than the start time.|
+|110103|不合法的奖励条件|Illegal reward conditions.|
+|110104|国家和时间存在重叠|There is overlap in countries and times.|
+|110105|无法审批或关闭自己创建的邀请好友|Unable to approve or turn off self created Refer Friends Setting.|
+|110106|无法关闭已开始的邀请好友|Unable to turn off started Refer Friends Setting.|
+|110107|邀请好友已结束|Refer Friends is finished.|
+|110108|邀请好友开始后无法编辑部分信息|Unable to edit locked information after Refer Friends starts.|
+|110109|无法删除已开始或已结束的邀请好友|Unable to delete started or finished Refer Friends Setting.|
+|110003|操作失败，没有权限|Operation failed, no permission|
+|12x|third party||
+|120001|内转正在进行中，请稍后再试|Internal transfer is processing, please try again later|
+|120002|转入转出币种不相同或传的转出币种参数不匹配|From and to accounts currency not match or request fund currency not match|
+|120003|转入或转出TA status不是EN|From or to accounts status is not ENABLE|
+|120004|内转用户非当前IB或直属下级|From or to account not belong to current IB user|
+|120005|转出的TA余额不足|Transfer amount exceeds the balance of the origin account|
+|120006|账号属于不同的用户|Account not belong to the same user|
