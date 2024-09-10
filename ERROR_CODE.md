@@ -83,9 +83,9 @@
 |30006|不是邮箱类型，不能复制|Not a mailbox type, can't copy.|
 |30007|牌照有重复通知|There are duplicate notifications.|
 |4x|和用户相关||
-|40001|用户名或密码错误|The username or password you’ve entered is incorrect|
+|40001|用户名或密码错误|The username or password you&rsquo;ve entered is incorrect|
 |40002|Admin user 不存在|Admin user not exist|
-|40003|密码错误|The password you’ve entered is incorrect|
+|40003|密码错误|The password you&rsquo;ve entered is incorrect|
 |40004|Admin Group id 已存在|Admin Group id already exist|
 |40005|交易账号不存在|Trading account does not exist|
 |40006|special 已存在|Special User is already exist|
@@ -132,3 +132,40 @@
 |40102|账号恢复申请失败，登录密码或生日不正确|Reset authenticator failed, password or date of birth was incorrect.|
 |40104|已存在验证器|Authenticator already exists.|
 |40106|暂不支持修改成此邮箱|This new email address is not supported now.|
+|41x|和用户注册相关||
+|41000|缺少注册配置信息|Missing registration configuration information.|
+|41001|若需要注册请联系管理员|Please contact the administrator to register account.|
+|41002|地址未配置无法进行登入|The login in address is invalid|
+|41003|该国家已经添加配置信息|The country has added configuration information|
+|41004|配置信息不能被刪除|The configuration information can't be deleted|
+|41005|请上传文件|Please upload file|
+|41006|邮件认证码错误|Incorrect user name or email authentication code.|
+|41007|邮件认证码已过期|The email authentication code has expired.|
+|41008|第三方人机验证服务端验证失败|Captcha verify fail.|
+|41009|推荐码填写错误|Referral code error.|
+|41010|注册链接错误|Registration link error.|
+|41011|注册配置发生改变，请刷新页面|The registration configuration has been modified, please refresh the page.|
+|41012|缺少必填参数|Missing required parameters.|
+|41013|用户密码为空|The user password is empty, please contact the administrator..|
+|41014|分配sale code 错误|Assign sale code error.|
+|41015|短协议上传错误|Short agreement upload error.|
+|41035|无法添加钱包账户，请联系管理员|Unable to add wallet account, please contact administrator|
+|41036|钱包账户已超出最大上限，无法继续添加|Wallet account has exceeded the maximum limit and cannot be added|
+|41037|超出允许文件数量|Exceeded the maximum number of files|
+|41038|不是HUB用户，无法添加HUBx账号|Not a hub user, cannot add hubx account|
+|41039|邮箱格式错误|The email format is incorrect.|
+|41040|用户注册失败|User registration failed.|
+|41041|用户注册牌照错误|Jurisdiction is error.|
+|41042|用户账号种类信息编辑错误|Member account type info edit failed.|
+|41043|问卷设置错误|Questionnaire setting error.|
+|41044|缺少用户注册原始信息|Missing registration original information.|
+|41045|注册相关code不存在|The registration referral code does not exist.|
+|41046|小于允许文件数量|Less than the minimum number of files|
+|41047|用户每日发送邮箱验证邮件超出限制|Limit exceeded. Only xx emails can be sent to one user per day|
+|41048|为满足可用问题数量限制，所输数字必须大于或等于X个。|Input number must equal or more than X to meet the limit number of enabled question.|
+|41049|可用的问题数量必须大于等于问题总数或通过分数设定值。|Enabled question must equal or more than number of Total Question or Pass Score.|
+|41050|为满足可重复问题数量要求，可用题目数量必须大于等于X个。|Enabled question must equal or more than X to meet the repeat question requirement.|
+|41051|您已用完本次问卷测试可尝试次数，请xx小时后再继续。|You have reached the limit for taking questionnaire, please try after xx hours.|
+|41052|所有分组题目数总和必须小于等于启用题目总数。|Input number must be equal or less than total number of enabled questions.|
+|41053|请完成所有题目。|Please Complete All Question(s).|
+|42001|跳转回主页|Return to the dashboard.|
