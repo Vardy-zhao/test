@@ -170,5 +170,9 @@
 |42004|不能出金|cannot withdraw|
 |42005|不能暂停这个活动|cannot pause the promotion|
 |42006|该用户不能领取奖励|The user does not receive a reward.|
-|42x|和promotion相关||
+|42008|用户未参与该活动|The user did not participate in the activity.|
+|42009|活动未开始|Activity not started.|
+|42010|活动已结束|The activity is over.|
+|42011|用户已经完成该活动|The user has completed the activity.|
+|42012|编辑进度值错误|Edit progress value error.|
 |999|Core 错误|Core error|
