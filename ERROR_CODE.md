@@ -206,3 +206,44 @@
 |42036|活动配置的优惠券无效|Promotion setting coupons invalid.|
 |42037|参与活动失败，您不满足活动激活要求且激活时间已过|Participating promotion failed, you do not meet the activation requirement, and activation period has passed.|
 |42038|邮箱不可用|Email unavailable.|
+|43x|和notification或邮件相关||
+|43000|默认邮件服务器不能被删除|Default email server cannot be deleted.|
+|43001|服务器已经关联牌照，请联系管理员删除|The server has been tied to jurisdiction, please contact the administrator to delete it.|
+|43002|Message 发送失败|Send message error.|
+|43003|沒有接受用戶|no recipient.|
+|43004|测试邮件暂不支持发message|Send Method: message, is not supported.|
+|43005|未配置HUBSPOT_API|HUBSPOT_API config not exist!|
+|43006|调用HubSpot API 报错|Call HubSpot API error|
+|44x|和point store相关||
+|44000|该商品已经是主推产品|This product is already the featured product.|
+|44001|该商品已经是在最顶层|This featured product is already on top.|
+|44002|该商品已经是在最底层|This featured product is already on bottom.|
+|44003|协议已经存在|The disclaimer already exist.|
+|44004|条款已经存在|The agreement already exist.|
+|44005|不能将第三级类别设置为父类|cannot set the third level category as a parent category.|
+|44006|该名字已使用|the name is already used.|
+|44007|新类别是被删除的类别的子级|The new product category is a sub category of the deleted category.|
+|44008|无法开启该类别因为他的父级是关闭的|Cannot open the category, because its parent is closed.|
+|44009|兑换所需积分或库存数值错误|Product specifications amount or inventory invalid|
+|44010|类别层级错误|the category level is incorrect.|
+|44011|商品定时上下架时间错误|Product set time invalid.|
+|44012|收货地址不存在|delivery address not exists.|
+|44013|没有权限浏览该订单|No permission to view this order.|
+|44014|支付失败|Payment Failed.|
+|44015|兑换失败|Submission Failed.|
+|44016|商品不存在或已被删除|Product not exist.|
+|44017|商品已被下架|Product not on sale.|
+|44018|此商品所属分类都被关闭|Product categories not display.|
+|44019|用户国家不符合商品条件|No permission(user country).|
+|44020|用户牌照不符合商品条件|No permission(user jurisdiction).|
+|44021|系统原因，请稍后再试|Please try again later.|
+|44022|订单不存在|Order is not exist.|
+|44023|返现正在处理中，请稍后再试|Cash Back in processing, Please try again later.|
+|44024|商品支付金额发生变化，请您刷新界面后重试|The payment amount for the product has changed. Please refresh the page and try again.|
+|44025|支付失败，优惠券不可用|Payment failed, coupon not available.|
+|44026|活动价必须小于原价|The activity price must be less than the original price|
+|44027|没有创建订单的权限|No permission to create the order.|
+|44028|订单号为空或不正确|Order Number is null or incorrect.|
+|44029|订单状态不适用|Order Status unavailable.|
+|44030|跟踪单号为空|Tracking number is null.|
+|44031|快递公司名字错误|Express company name wrong.|
