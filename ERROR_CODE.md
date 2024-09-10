@@ -184,3 +184,25 @@
 |42013|不在可编辑的时间范围内,不能编辑进度条|Not within editable time frame. Can't edit the progress bar.|
 |42014|您已领取完所有奖励|You have received all the reward|
 |42015|用户积分及活动功能未开启|User Points and Promotion function are not turned on|
+|42016|更改用户信息会导致活动错误|Changing user information causes an promotion error.|
+|42017|当前用户无资格参与活动|The user can not participate in the promotion activity.|
+|42018|同一个奖励步骤不能设置相同的奖励优惠券|duplicate coupon id in same step|
+|42019|活动名称重复|duplicate promotion name|
+|42020|活动配置多语言选项中提交的语言不存在或不可用|promotion description language not exist or not available.|
+|42021|活动配置奖励优惠券数量大于5|promotion reward coupon num can not be greater than 5.|
+|42022|活动不存在|The promotion does not exist.|
+|42023|当前活动不能被删除|Promotion status is enable, can not delete.|
+|42024|您的优惠券领取未成功，请联系我们的客户支持团队|Your coupon claim was not successful. Please contact our customer support team for assistance.|
+|42025|活动异常，请联系管理员|Promotion exception, please contact administrator.|
+|42026|活动已结束，请您刷新界面|The promotion has ended, please refresh the page.|
+|42027|请勿重复领奖，请您刷新界面|Do not redeem rewards repeatedly, please refresh the page.|
+|42028|抱歉，该活动不可调整进度结算的顺序|Sorry, this promotion cannot adjust the order of progress settlement.|
+|42030|您已退出该活动，请您刷新界面|You have withdrawn from this promotion, please refresh the page.|
+|42031|抱歉，您没有参与该活动的权限，请联系管理员|Sorry, you are not authorized to participate in the promotion, please contact administrator.|
+|42032|报名时间已结束，无法参与该活动|The application period has ended, can not participate in the promotion.|
+|42033|上传文件记录为空且允许的账户为空，请返回编辑。|Empty upload records and no allowed accounts chosen, please return to edit.|
+|42034|预览链接已失效|preview key expire|
+|42035|领取奖励失败，请联系客服团队|Rewards redeem failed, please contact our support team|
+|42036|活动配置的优惠券无效|Promotion setting coupons invalid.|
+|42037|参与活动失败，您不满足活动激活要求且激活时间已过|Participating promotion failed, you do not meet the activation requirement, and activation period has passed.|
+|42038|邮箱不可用|Email unavailable.|
