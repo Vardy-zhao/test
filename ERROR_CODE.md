@@ -169,3 +169,15 @@
 |41052|所有分组题目数总和必须小于等于启用题目总数。|Input number must be equal or less than total number of enabled questions.|
 |41053|请完成所有题目。|Please Complete All Question(s).|
 |42001|跳转回主页|Return to the dashboard.|
+|42x|和promotion相关||
+|42000|次序重复|duplicate sort|
+|42002|不能编辑promotion的显示状态|Cannot edit promotion display status|
+|42003|不能编辑该promotion|cannot edit the promotion|
+|42004|不能出金|cannot withdraw|
+|42005|不能暂停这个活动|cannot pause the promotion|
+|42006|该用户不能领取奖励|The user does not receive a reward.|
+|42008|用户未参与该活动|The user did not participate in the activity.|
+|42009|活动未开始|Activity not started.|
+|42010|活动已结束|The activity is over.|
+|42011|用户已经完成该活动|The user has completed the activity.|
+|42012|编辑进度值错误|Edit progress value error.|
