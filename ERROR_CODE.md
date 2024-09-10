@@ -163,5 +163,12 @@
 |41051|您已用完本次问卷测试可尝试次数，请xx小时后再继续。|You have reached the limit for taking questionnaire, please try after xx hours.|
 |41052|所有分组题目数总和必须小于等于启用题目总数。|Input number must be equal or less than total number of enabled questions.|
 |41053|请完成所有题目。|Please Complete All Question(s).|
-|41x|和用户注册相关||
+|42000|次序重复|duplicate sort|
+|42001|跳转回主页|Return to the dashboard.|
+|42002|不能编辑promotion的显示状态|Cannot edit promotion display status|
+|42003|不能编辑该promotion|cannot edit the promotion|
+|42004|不能出金|cannot withdraw|
+|42005|不能暂停这个活动|cannot pause the promotion|
+|42006|该用户不能领取奖励|The user does not receive a reward.|
+|42x|和promotion相关||
 |999|Core 错误|Core error|
