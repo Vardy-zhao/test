@@ -102,6 +102,7 @@ conn.request("PUT", "/wiki/api/v2/pages/3333423226", body=payload, headers=heade
 response = conn.getresponse()
 conn.close()
 data = response.read()
+
 if response.status == 200:
     print("success")
     with open("ERROR_CODE.md", "w", encoding="utf-8") as f:
