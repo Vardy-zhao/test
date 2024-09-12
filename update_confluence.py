@@ -97,9 +97,6 @@ headers = {
     "Authorization": "Basic dmFyZHkuemhhb0BsaWZlYnl0ZS5pbzpBVEFUVDN4RmZHRjBaS0ROSHY5VGh5My1abzhfMDRLb1dIZ0tJMUdWRkpKMEJYRUx0Q1dqWERONXd6ckt3SDdUcUVnajRJbWhiV0pZSHhSb1pHZXJVZ1B4MGpmNWJNeGtwc1piUkNuSndDWVBRZG1BWEw5dHNmZ2tJelFBLTQ1UnRCdGd6bkoyMmY5M3ZvV044RldDazdOVjNxVVdHdzZ5ZWRzTk1qaVd1OTR6UzZubzdkb0ZNcnc9QzZFMThENEM="
 }
 
-# 将字符串写入文件
-with open("output.json", "w", encoding="utf-8") as file:
-    file.write(payload)
 conn = http.client.HTTPSConnection("thebidgroup.atlassian.net")
 conn.request("PUT", "/wiki/api/v2/pages/3333423226", body=payload, headers=headers)
 response = conn.getresponse()
