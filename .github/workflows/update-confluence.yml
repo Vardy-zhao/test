@@ -25,7 +25,7 @@ jobs:
 
     - name: Run Python script
       run: |
-        if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -q 'ERROR_CODE.md'; then
+        if git diff --name-only | grep -q 'ERROR_CODE.md'; then
           python update_confluence.py
         else
           echo "error.md has not been modified."
