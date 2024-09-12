@@ -24,4 +24,9 @@ jobs:
         pip install requests
 
     - name: Run Python script
-      run: python update_confluence.py
+      run: |
+        if git diff --name-only HEAD^ HEAD | grep -q 'error_code.md'; then
+          python update_confluence.py
+        else
+          echo "error_code.md has not been modified."
+        fi
