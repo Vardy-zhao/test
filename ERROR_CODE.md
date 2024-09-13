@@ -1,6 +1,6 @@
 ## 异常code表
-| Code  | Description                                |
-|-------|--------------------------------------------|
+| Code  | Description                                 |
+|-------|---------------------------------------------|
 | 101 | Lack of necessary fields or invalid fields. |
 | 102 | bad request type |
 | 103 | bad request format |
@@ -81,4 +81,4 @@
 | 30004 | Sender name can not be empty. |
 | 30005 | Sender email is not correct. |
 | 30006 | Not a mailbox type, can't copy. |
-| 30007 | There are duplicate notifications. |
+| 30007 | There are duplicate notifications.1 |
