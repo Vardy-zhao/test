@@ -40,5 +40,5 @@
 | 10023 | Input cannot be empty. |
 | 10024 | The link has been deleted, please check with Admin |
 | 10025 | One or more selected conditions in {condition} has been disabled |
-| 10026 | Invalid payload. |
+| 10026 | Invalid payload1. |
 | 10027 | Failed to issue token. |
