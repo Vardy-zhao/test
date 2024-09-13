@@ -74,3 +74,11 @@
 | 20030 | A certified card information error. |
 | 20031 | Affiliate ID {{the number}} has been assigned to another sales code {{sales code}}. |
 | 20032 | Invalid input. |
+| 3xxxx | - |
+| 30001 | The notification no content. |
+| 30002 | notification already exist. |
+| 30003 | Admin did not configure the notification. |
+| 30004 | Sender name can not be empty. |
+| 30005 | Sender email is not correct. |
+| 30006 | Not a mailbox type, can't copy. |
+| 30007 | There are duplicate notifications. |
