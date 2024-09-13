@@ -43,4 +43,3 @@
 | 10026 | Invalid payload. |
 | 10027 | Failed to issue token. |
 | 10028 | Please input a integer that more than or equal to 15. |
-| 10029 | The maximum Session Time can be 7 days only, please re-input. |
