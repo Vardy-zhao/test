@@ -81,4 +81,4 @@
 | 30004 | Sender name can not be empty. |
 | 30005 | Sender email is not correct. |
 | 30006 | Not a mailbox type, can't copy. |
-| 30007 | There are duplicate notifications.1 |
+| 30007 | There are duplicate notifications. |
