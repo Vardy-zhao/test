@@ -1,6 +1,6 @@
 ## 异常code表
-| Code  | Description                                 |
-|-------|---------------------------------------------|
+| Code  | Description                                |
+|-------|--------------------------------------------|
 | 101 | Lack of necessary fields or invalid fields. |
 | 102 | bad request type |
 | 103 | bad request format |
