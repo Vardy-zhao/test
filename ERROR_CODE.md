@@ -556,6 +556,7 @@
 | 85042 | Can not edit or delete configuration which is not editable. |
 | 85044 | The same display name cannot be reused. |
 | 85046 | The display language does not exist or is not available. |
+| 87xxx | - |
 | 87001 | Only Numbers and Alphabets are allowed in USDT Address. |
 | 87002 | Invalid Verification Code. |
 | 87003 | The code has been used. |
@@ -606,10 +607,12 @@
 | 110106 | Unable to turn off started Refer Friends Setting. |
 | 110107 | Refer Friends is finished. |
 | 110108 | Unable to edit locked information after Refer Friends starts. |
-| 110109 | Unable to delete started or finished Refer Friends Setting.1 |
+| 110109 | Unable to delete started or finished Refer Friends Setting. |
 | 12xxxx | third party |
 | 120001 | Internal transfer is processing, please try again later |
 | 120002 | From and to accounts currency not match or request fund currency not match |
 | 120003 | From or to accounts status is not ENABLE |
 | 120004 | From or to account not belong to current IB user 1 |
 | 120005 | Transfer amount exceeds the balance of the origin account |
+| 120006 | Account not belong to the same user |
+| 13xxxx | - |
