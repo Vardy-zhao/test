@@ -216,7 +216,6 @@
 | 42036 | Promotion setting coupons invalid. |
 | 42037 | Participating promotion failed, you do not meet the activation requirement, and activation period has passed. |
 | 42038 | Email unavailable. |
-| 42039 | Test. |
 | 43xxx | Notification or Email |
 | 43000 | Default email server cannot be deleted. |
 | 43001 | The server has been tied to jurisdiction, please contact the administrator to delete it. |
