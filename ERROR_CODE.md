@@ -556,7 +556,6 @@
 | 85042 | Can not edit or delete configuration which is not editable. |
 | 85044 | The same display name cannot be reused. |
 | 85046 | The display language does not exist or is not available. |
-| 87xxx | - |
 | 87001 | Only Numbers and Alphabets are allowed in USDT Address. |
 | 87002 | Invalid Verification Code. |
 | 87003 | The code has been used. |
@@ -599,6 +598,7 @@
 | 11xxxx | Refer Friend |
 | 110001 | Trading account is invalid. |
 | 110002 | Redeem failed,please contact customer service. |
+| 110003 | Operation failed, no permission |
 | 110101 | Refer Friends Setting not exist. |
 | 110102 | When the end time exists, it cannot be smaller than the start time. |
 | 110103 | Illegal reward conditions. |
@@ -612,7 +612,6 @@
 | 120001 | Internal transfer is processing, please try again later |
 | 120002 | From and to accounts currency not match or request fund currency not match |
 | 120003 | From or to accounts status is not ENABLE |
-| 120004 | From or to account not belong to current IB user 1 |
+| 120004 | From or to account not belong to current IB user |
 | 120005 | Transfer amount exceeds the balance of the origin account |
 | 120006 | Account not belong to the same user |
-| 13xxxx | - |
